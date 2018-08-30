@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+	<constant name="struts.devMode" value="true" />
+	
+	<package name="sso" namespace="/sso" extends="struts-default">
+		<action name="doLogin" class="com.imooc.sso.SSOAction" method="doLogin">
+			<result name="success" type="redirect">${gotoUrl}</result>
+	        <result name="login">/login.jsp</result>
+		</action>
+	</package>	
+	
+	<package name="demo1" namespace="/demo1" extends="struts-default">
+	    <action name="main" class="com.imooc.demo1.Demo1Action" method="main">
+	        <result name="success">/success1.jsp</result>
+	        <result name="login">/login.jsp</result>
+	    </action>
+	</package>
+	<package name="demo2" namespace="/demo2" extends="struts-default">
+	    <action name="main" class="com.imooc.demo2.Demo2Action" method="main">
+	        <result name="success">/success2.jsp</result>
+	        <result name="login">/login.jsp</result>
+	    </action>
+	</package>
+</struts>
