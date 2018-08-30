@@ -1,11 +1,38 @@
 # imooc-sso
-imooc,sso,Struts2
 
+imooc sso 学习笔记
+
+
+# 运行环境 #
+----------
+
+
+
+
+- eclipse下载地址：
 
 ```shell
-chrome://settings/cookies/detail?site=localhost
+http://ftp.jaist.ac.jp/pub/eclipse/technology/epp/downloads/release/photon/R/eclipse-jee-photon-R-win32-x86_64.zip
 ```
 
+
+
+- jetty插件下载
+
+打开eclipse，依次点击菜单Help->Eclipse Marketplace，在Find后面的框中输入jetty，选择第一项进行install即可。
+
+![](https://raw.githubusercontent.com/CoderDream/imooc-sso/master/snapshot/sso_0001.png)
+
+
+
+
+- 运行项目：
+
+![](https://raw.githubusercontent.com/CoderDream/imooc-sso/master/snapshot/sso_0002.png)
+
+
+
+- 控制台信息：
 
 ```shell
    ____    ___                   __    __  __         ___
@@ -46,6 +73,38 @@ Console available: type "help".
 ```
 
 
+## 同域 ##
+
+
+
+### 访问地址 ###
+
+```shell
+http://localhost:8080/demo1/main.action
+
+http://localhost:8080/demo2/main.action
+```
+
+![](https://raw.githubusercontent.com/CoderDream/imooc-sso/master/snapshot/sso_0101.png)
+
+
+![](https://raw.githubusercontent.com/CoderDream/imooc-sso/master/snapshot/sso_0102.png)
+
+
+![](https://raw.githubusercontent.com/CoderDream/imooc-sso/master/snapshot/sso_0103.png)
+
+
+查看chrome的cookie信息路径：
+```shell
+chrome://settings/cookies/detail?site=localhost
+```
+
+localhost的cookie信息截图如下：
+
+![](https://raw.githubusercontent.com/CoderDream/imooc-sso/master/snapshot/sso_0104.png)
+
+## 同父域 ##
+
 
 修改hosts文件：
 ```shell
@@ -54,3 +113,39 @@ Console available: type "help".
 127.0.0.1	check.x.com
 ```
 
+### 访问地址 ###
+
+```shell
+http://demo1.x.com:8080/demo1/main.action
+
+http://demo2.x.com:8080/demo2/main.action
+```
+
+- 未登陆：
+
+![](https://raw.githubusercontent.com/CoderDream/imooc-sso/master/snapshot/sso_0201.png)
+
+- 未登录
+
+![](https://raw.githubusercontent.com/CoderDream/imooc-sso/master/snapshot/sso_0202.png)
+
+- 登陆页面
+
+![](https://raw.githubusercontent.com/CoderDream/imooc-sso/master/snapshot/sso_0203.png)
+
+- 登陆成功
+
+![](https://raw.githubusercontent.com/CoderDream/imooc-sso/master/snapshot/sso_0204.png)
+
+- 刷新页面（浏览器已有cookie信息）
+
+![](https://raw.githubusercontent.com/CoderDream/imooc-sso/master/snapshot/sso_0205.png)
+
+
+查看chrome的cookie信息路径：
+```shell
+chrome://settings/cookies/detail?site=x.com
+```
+x.com的cookie信息截图如下：
+
+![](https://raw.githubusercontent.com/CoderDream/imooc-sso/master/snapshot/sso_0206.png)
