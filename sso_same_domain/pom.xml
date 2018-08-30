@@ -4,14 +4,11 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<!-- <parent> <groupId>org.apache.struts</groupId> <artifactId>struts-examples</artifactId> 
-		<version>1.0.0</version> </parent> -->
-
 	<groupId>org.apache.struts</groupId>
-	<artifactId>sso</artifactId>
+	<artifactId>sso_same_domain</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>sso demo</name>
+	<name>sso_same_domain</name>
 
 	<description>
        sso demo.
