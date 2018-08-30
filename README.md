@@ -3,11 +3,7 @@
 imooc sso 学习笔记
 
 
-# 运行环境 #
-----------
-
-
-
+## 运行环境 ##
 
 - eclipse下载地址：
 
@@ -76,6 +72,7 @@ Console available: type "help".
 ## 同域 ##
 
 
+![](https://raw.githubusercontent.com/CoderDream/imooc-sso/master/snapshot/sso_0003.png)
 
 ### 访问地址 ###
 
@@ -105,6 +102,7 @@ localhost的cookie信息截图如下：
 
 ## 同父域 ##
 
+![](https://raw.githubusercontent.com/CoderDream/imooc-sso/master/snapshot/sso_0004.png)
 
 修改hosts文件：
 ```shell
@@ -149,3 +147,53 @@ chrome://settings/cookies/detail?site=x.com
 x.com的cookie信息截图如下：
 
 ![](https://raw.githubusercontent.com/CoderDream/imooc-sso/master/snapshot/sso_0206.png)
+
+
+## 跨域 ##
+
+![](https://raw.githubusercontent.com/CoderDream/imooc-sso/master/snapshot/sso_0005.png)
+
+```shell
+127.0.0.1	www.a.com
+127.0.0.1	www.b.com
+127.0.0.1	www.x.com
+```
+
+### 访问地址 ###
+```shell
+http://www.a.com:8080/demo1/main.action
+
+http://www.b.com:8080/demo2/main.action
+```
+
+- 未登陆：
+
+![](https://raw.githubusercontent.com/CoderDream/imooc-sso/master/snapshot/sso_0301.png)
+
+- 未登录
+
+![](https://raw.githubusercontent.com/CoderDream/imooc-sso/master/snapshot/sso_0302.png)
+
+- 登陆成功
+
+![](https://raw.githubusercontent.com/CoderDream/imooc-sso/master/snapshot/sso_0303.png)
+
+- 刷新页面（浏览器已有cookie信息）
+
+![](https://raw.githubusercontent.com/CoderDream/imooc-sso/master/snapshot/sso_0304.png)
+
+
+查看chrome的cookie信息路径：
+```shell
+chrome://settings/cookies/detail?site=www.a.com
+
+chrome://settings/cookies/detail?site=www.b.com
+```
+www.a.com的cookie信息截图如下：
+
+![](https://raw.githubusercontent.com/CoderDream/imooc-sso/master/snapshot/sso_0305.png)
+
+www.b.com的cookie信息截图如下：
+
+![](https://raw.githubusercontent.com/CoderDream/imooc-sso/master/snapshot/sso_0306.png)
+
