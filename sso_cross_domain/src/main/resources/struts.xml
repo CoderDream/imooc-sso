@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+	<constant name="struts.devMode" value="true" />
+
+
+	<package name="demo1" namespace="/demo1"
+		extends="struts-default">
+		<action name="main" class="www.a.com.Demo1Action" method="main">
+			<result name="success">/success1.jsp</result>
+			<result name="login">/login.jsp</result>
+		</action>
+
+		<action name="doLogin" class="www.a.com.Demo1Action"
+			method="doLogin">
+			<result name="success">/success1.jsp</result>
+			<result name="login">/login.jsp</result>
+		</action>
+
+		<action name="addCookie" class="www.a.com.Demo1Action"
+			method="addCookie">
+		</action>
+	</package>
+
+	<package name="demo2" namespace="/demo2"
+		extends="struts-default">
+		<action name="doLogin" class="www.b.com.Demo2Action"
+			method="doLogin">
+			<result name="success">/success2.jsp</result>
+			<result name="login">/login.jsp</result>
+		</action>
+
+		<action name="addCookie" class="www.b.com.Demo2Action"
+			method="addCookie">
+		</action>
+
+		<action name="main" class="www.b.com.Demo2Action" method="main">
+			<result name="success">/success2.jsp</result>
+			<result name="login">/login.jsp</result>
+		</action>
+	</package>
+
+	<package name="sso" namespace="/sso" extends="struts-default">
+		<action name="doLogin" class="www.x.com.SSOAction"
+			method="doLogin">
+		</action>
+
+		<action name="checkCookie" class="www.x.com.SSOAction"
+			method="checkCookie">
+		</action>
+	</package>
+
+</struts>
