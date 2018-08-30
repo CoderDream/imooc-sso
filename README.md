@@ -82,11 +82,15 @@ http://localhost:8080/demo1/main.action
 http://localhost:8080/demo2/main.action
 ```
 
+- 未登陆：
+
 ![](https://raw.githubusercontent.com/CoderDream/imooc-sso/master/snapshot/sso_0101.png)
 
+- 登陆成功
 
 ![](https://raw.githubusercontent.com/CoderDream/imooc-sso/master/snapshot/sso_0102.png)
 
+- 刷新页面（浏览器已有cookie信息）
 
 ![](https://raw.githubusercontent.com/CoderDream/imooc-sso/master/snapshot/sso_0103.png)
 
@@ -189,11 +193,11 @@ chrome://settings/cookies/detail?site=www.a.com
 
 chrome://settings/cookies/detail?site=www.b.com
 ```
-www.a.com的cookie信息截图如下：
+www.a.com 的cookie信息截图如下：
 
 ![](https://raw.githubusercontent.com/CoderDream/imooc-sso/master/snapshot/sso_0305.png)
 
-www.b.com的cookie信息截图如下：
+www.b.com 的cookie信息截图如下：
 
 ![](https://raw.githubusercontent.com/CoderDream/imooc-sso/master/snapshot/sso_0306.png)
 
