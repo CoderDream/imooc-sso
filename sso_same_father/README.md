@@ -1,0 +1,1 @@
+Template application for building professional sso applications with Struts2.
